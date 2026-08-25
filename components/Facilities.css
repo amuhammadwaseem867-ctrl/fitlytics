@@ -1,0 +1,623 @@
+/* =========================================================
+   FITLYTICS — FACILITIES
+========================================================= */
+
+.facilities {
+  position: relative;
+
+  padding: 145px 0 120px;
+
+  background: var(--white);
+  color: var(--black);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.facilities-header {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 80px;
+
+  align-items: end;
+}
+
+.facilities-title {
+  margin-top: 28px;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    76px,
+    9vw,
+    140px
+  );
+
+  font-weight: 900;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.04em;
+
+  text-transform: uppercase;
+}
+
+.facilities-title span {
+  display: block;
+
+  color: var(--red);
+}
+
+.facilities-intro {
+  max-width: 430px;
+
+  padding-bottom: 8px;
+
+  color: #666;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   FEATURE
+========================================================= */
+
+.facility-feature {
+  margin-top: 90px;
+}
+
+.facility-feature-image {
+  position: relative;
+
+  height: 620px;
+
+  overflow: hidden;
+
+  background: #151515;
+}
+
+.facility-feature-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.facility-feature:hover img {
+  transform: scale(1.025);
+}
+
+.facility-feature-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.82),
+      transparent 60%
+    );
+}
+
+.facility-feature-content {
+  position: absolute;
+
+  left: 45px;
+  bottom: 40px;
+
+  color: var(--white);
+}
+
+.facility-feature-content span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: var(--red);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.facility-feature-content h3 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    60px,
+    8vw,
+    120px
+  );
+
+  font-weight: 900;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================================
+   FACILITY GRID
+========================================================= */
+
+.facilities-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-top: 18px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.facility-card {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+
+  background: var(--white);
+
+  overflow: hidden;
+}
+
+.facility-card-image {
+  position: relative;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  background: #151515;
+}
+
+.facility-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: grayscale(100%);
+
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
+}
+
+.facility-card:hover img {
+  transform: scale(1.06);
+
+  filter: grayscale(0%);
+}
+
+.facility-number {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  color: var(--red);
+
+  font-family: var(--font-heading);
+
+  font-size: 28px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.facility-card-content {
+  padding: 27px;
+}
+
+.facility-card-content h3 {
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: 28px;
+
+  font-weight: 800;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.02em;
+}
+
+.facility-card-content p {
+  max-width: 320px;
+
+  margin-top: 13px;
+
+  color: #777;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.facility-card-line {
+  display: block;
+
+  width: 45px;
+  height: 3px;
+
+  margin-top: 22px;
+
+  background: var(--red);
+
+  transition: width 0.35s ease;
+}
+
+.facility-card:hover .facility-card-line {
+  width: 100%;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+========================================================= */
+
+.facility-highlights {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 55px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.facility-highlights > div {
+  min-height: 105px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 0 25px;
+
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.facility-highlights > div:first-child {
+  padding-left: 0;
+}
+
+.facility-highlights > div:last-child {
+  border-right: none;
+}
+
+.facility-highlights strong {
+  color: var(--red);
+
+  font-family: var(--font-heading);
+
+  font-size: 28px;
+
+  font-weight: 800;
+}
+
+.facility-highlights span {
+  margin-top: 5px;
+
+  color: #666;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .facilities {
+    padding: 110px 0 90px;
+  }
+
+  .facilities-header {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .facilities-title {
+    font-size: clamp(
+      70px,
+      11vw,
+      110px
+    );
+  }
+
+  .facility-feature {
+    margin-top: 70px;
+  }
+
+  .facility-feature-image {
+    height: 500px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facility-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .facility-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facility-highlights > div {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .facility-highlights > div:nth-child(2) {
+    border-right: none;
+  }
+
+  .facility-highlights > div:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .facilities {
+    padding: 82px 0 68px;
+  }
+
+
+  /* -----------------------------------------
+     HEADER
+  ----------------------------------------- */
+
+  .facilities-header {
+    gap: 28px;
+  }
+
+  .facilities-title {
+    margin-top: 20px;
+
+    font-size: clamp(
+      58px,
+      17.5vw,
+      82px
+    );
+
+    line-height: 0.92;
+
+    letter-spacing: -0.025em;
+  }
+
+  .facilities-intro {
+    max-width: 330px;
+
+    padding-bottom: 0;
+
+    font-size: 11.5px;
+
+    line-height: 1.8;
+  }
+
+
+  /* -----------------------------------------
+     FEATURE
+  ----------------------------------------- */
+
+  .facility-feature {
+    margin-top: 48px;
+  }
+
+  .facility-feature-image {
+    height: 460px;
+  }
+
+  .facility-feature-content {
+    left: 22px;
+
+    right: 20px;
+
+    bottom: 25px;
+  }
+
+  .facility-feature-content span {
+    margin-bottom: 14px;
+
+    font-size: 7px;
+  }
+
+  .facility-feature-content h3 {
+    font-size: clamp(
+      48px,
+      14vw,
+      64px
+    );
+
+    line-height: 0.9;
+
+    letter-spacing: -0.025em;
+  }
+
+
+  /* -----------------------------------------
+     CARDS
+  ----------------------------------------- */
+
+  .facilities-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    margin-top: 14px;
+  }
+
+  .facility-card:last-child {
+    grid-column: auto;
+  }
+
+  .facility-card-image {
+    height: 270px;
+  }
+
+  .facility-number {
+    top: 15px;
+    left: 15px;
+
+    font-size: 24px;
+  }
+
+  .facility-card-content {
+    padding: 22px;
+  }
+
+  .facility-card-content h3 {
+    font-size: 25px;
+
+    line-height: 0.98;
+  }
+
+  .facility-card-content p {
+    max-width: 290px;
+
+    margin-top: 11px;
+
+    font-size: 10.5px;
+
+    line-height: 1.7;
+  }
+
+  .facility-card-line {
+    margin-top: 18px;
+  }
+
+
+  /* -----------------------------------------
+     HIGHLIGHTS
+  ----------------------------------------- */
+
+  .facility-highlights {
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-top: 38px;
+  }
+
+  .facility-highlights > div,
+  .facility-highlights > div:first-child {
+    min-height: 88px;
+
+    padding: 14px;
+  }
+
+  .facility-highlights strong {
+    font-size: 24px;
+  }
+
+  .facility-highlights span {
+    margin-top: 4px;
+
+    font-size: 6.5px;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.12em;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .facilities {
+    padding: 70px 0 58px;
+  }
+
+  .facilities-title {
+    font-size: 56px;
+
+    line-height: 0.94;
+  }
+
+  .facilities-intro {
+    font-size: 10.5px;
+  }
+
+  .facility-feature {
+    margin-top: 42px;
+  }
+
+  .facility-feature-image {
+    height: 410px;
+  }
+
+  .facility-feature-content {
+    left: 19px;
+
+    bottom: 22px;
+  }
+
+  .facility-feature-content h3 {
+    font-size: 48px;
+
+    line-height: 0.92;
+  }
+
+  .facility-card-image {
+    height: 245px;
+  }
+
+  .facility-card-content {
+    padding: 20px;
+  }
+
+  .facility-card-content h3 {
+    font-size: 23px;
+  }
+
+  .facility-highlights span {
+    font-size: 6px;
+  }
+}

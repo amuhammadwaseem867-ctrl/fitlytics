@@ -1,0 +1,502 @@
+/* =========================================================
+   FITLYTICS — ABOUT
+========================================================= */
+
+.about {
+  position: relative;
+
+  padding: 150px 0 120px;
+
+  background: var(--white);
+  color: var(--black);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.about-container {
+  position: relative;
+}
+
+
+/* =========================================================
+   TOP LABEL
+========================================================= */
+
+.about-label {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.about-label-number {
+  color: rgba(0, 0, 0, 0.35);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 100px;
+
+  padding-top: 85px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.about-heading-wrap {
+  position: relative;
+}
+
+.about-heading {
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    80px,
+    10vw,
+    150px
+  );
+
+  font-weight: 900;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.045em;
+
+  text-transform: uppercase;
+}
+
+.about-heading span {
+  color: var(--red);
+}
+
+.about-red-line {
+  width: 90px;
+  height: 5px;
+
+  margin-top: 45px;
+
+  background: var(--red);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-content {
+  max-width: 600px;
+
+  padding-top: 8px;
+}
+
+.about-lead {
+  max-width: 520px;
+
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: 34px;
+
+  font-weight: 600;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.012em;
+}
+
+.about-text {
+  max-width: 530px;
+
+  margin-top: 25px;
+
+  color: #666;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+.about-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 35px;
+
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid var(--black);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.about-link span {
+  color: var(--red);
+
+  font-size: 18px;
+
+  transition: transform 0.25s ease;
+}
+
+.about-link:hover {
+  color: var(--red);
+
+  border-color: var(--red);
+}
+
+.about-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.about-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 110px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.14);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+.about-stat {
+  min-height: 120px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 0 30px;
+
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.about-stat:first-child {
+  padding-left: 0;
+}
+
+.about-stat:last-child {
+  border-right: none;
+}
+
+.about-stat strong {
+  color: var(--red);
+
+  font-family: var(--font-heading);
+
+  font-size: 36px;
+
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.about-stat span {
+  margin-top: 7px;
+
+  color: #555;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about {
+    padding: 110px 0 90px;
+  }
+
+  .about-grid {
+    gap: 50px;
+
+    padding-top: 65px;
+  }
+
+  .about-heading {
+    font-size: clamp(
+      70px,
+      11vw,
+      110px
+    );
+  }
+
+  .about-lead {
+    font-size: 28px;
+  }
+
+  .about-stats {
+    margin-top: 80px;
+  }
+
+  .about-stat {
+    padding: 0 18px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .about {
+    padding: 82px 0 68px;
+  }
+
+
+  /* -----------------------------------------
+     LABEL
+  ----------------------------------------- */
+
+  .about-label {
+    padding-bottom: 16px;
+  }
+
+  .about-label-number {
+    font-size: 8px;
+  }
+
+
+  /* -----------------------------------------
+     GRID
+  ----------------------------------------- */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 48px;
+
+    padding-top: 48px;
+  }
+
+
+  /* -----------------------------------------
+     HEADING
+  ----------------------------------------- */
+
+  .about-heading {
+    font-size: clamp(
+      62px,
+      18vw,
+      88px
+    );
+
+    font-weight: 800;
+
+    line-height: 0.91;
+
+    letter-spacing: -0.025em;
+  }
+
+  .about-red-line {
+    width: 58px;
+
+    height: 3px;
+
+    margin-top: 27px;
+  }
+
+
+  /* -----------------------------------------
+     CONTENT
+  ----------------------------------------- */
+
+  .about-content {
+    max-width: 100%;
+
+    padding-top: 0;
+  }
+
+  .about-lead {
+    max-width: 330px;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.01em;
+  }
+
+  .about-text {
+    max-width: 100%;
+
+    margin-top: 21px;
+
+    font-size: 12.5px;
+
+    line-height: 1.8;
+  }
+
+  .about-link {
+    margin-top: 28px;
+
+    gap: 12px;
+
+    font-size: 9px;
+  }
+
+  .about-link span {
+    font-size: 16px;
+  }
+
+
+  /* -----------------------------------------
+     STATS
+  ----------------------------------------- */
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-top: 58px;
+  }
+
+  .about-stat,
+  .about-stat:first-child {
+    min-height: 92px;
+
+    padding: 18px;
+  }
+
+  .about-stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .about-stat:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .about-stat strong {
+    font-size: 29px;
+  }
+
+  .about-stat span {
+    margin-top: 5px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.15em;
+
+    line-height: 1.4;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .about {
+    padding: 72px 0 58px;
+  }
+
+  .about-grid {
+    gap: 42px;
+
+    padding-top: 42px;
+  }
+
+  .about-heading {
+    font-size: 62px;
+
+    line-height: 0.94;
+
+    letter-spacing: -0.02em;
+  }
+
+  .about-red-line {
+    margin-top: 24px;
+  }
+
+  .about-lead {
+    max-width: 290px;
+
+    font-size: 23px;
+
+    line-height: 1.14;
+  }
+
+  .about-text {
+    font-size: 12px;
+
+    line-height: 1.78;
+  }
+
+  .about-stats {
+    margin-top: 50px;
+  }
+
+  .about-stat {
+    min-height: 88px;
+
+    padding: 16px;
+  }
+
+  .about-stat strong {
+    font-size: 27px;
+  }
+
+  .about-stat span {
+    font-size: 6.5px;
+  }
+}
